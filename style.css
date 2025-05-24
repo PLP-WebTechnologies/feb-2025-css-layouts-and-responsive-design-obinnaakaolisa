@@ -1,0 +1,332 @@
+/* Importing a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Universal selector for base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Element selector for body with Grid layout */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Class selector for header */
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #1a252f;
+}
+
+/* ID selector for navigation with Flexbox */
+#main-nav {
+    background-color: #3498db;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+#main-nav li {
+    margin: 10px 20px;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#main-nav a:hover {
+    color: #f1c40f;
+}
+
+/* Class selector for main content with Flexbox */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Class selector for content sections */
+.content-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Class selector for image styling */
+.styled-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: fill;
+    border: 3px solid #3498db;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Class selector for contact table */
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.contact-table th, .contact-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Class selector for registration form */
+.register-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.register-form input,
+.register-form select,
+.register-form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-form button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #27ae60;
+}
+
+/* Styling for fieldsets */
+.register-form fieldset {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+}
+
+/* Styling for legend */
+.register-form legend {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Custom radio button styling */
+.register-form input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.register-form input[type="radio"]:checked {
+    background-color: #3498db;
+    box-shadow: inset 0 0 0 4px white;
+}
+
+.register-form input[type="radio"]:hover {
+    border-color: #2980b9;
+}
+
+/* Custom checkbox styling */
+.register-form input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.register-form input[type="checkbox"]:checked {
+    background-color: #3498db;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position: center;
+}
+
+.register-form input[type="checkbox"]:hover {
+    border-color: #2980b9;
+}
+
+/* Class selector for multimedia section */
+#multimedia {
+    margin: 20px 0;
+}
+
+#multimedia audio,
+#multimedia video {
+    display: block;
+    margin: 15px auto;
+}
+
+/* Class selector for responsive video */
+.responsive-video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Class selector for footer */
+.main-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #1a252f;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile (up to 600px) */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 10px;
+    }
+
+    .main-header {
+        padding: 15px;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-nav li {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        gap: 15px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .contact-table {
+        font-size: 0.9em;
+    }
+
+    .register-form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .responsive-video {
+        width: 100%;
+    }
+}
+
+/* Tablet (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 15px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .register-form {
+        max-width: 80%;
+    }
+
+    .responsive-video {
+        width: 80%;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media screen and (min-width: 1025px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 20px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .register-form {
+        max-width: 500px;
+    }
+
+    .responsive-video {
+        width: 600px;
+    }
+}

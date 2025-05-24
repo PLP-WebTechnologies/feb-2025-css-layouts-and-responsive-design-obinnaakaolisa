@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- Declares the document as HTML5 -->
+<html lang="en">
+<head>
+    <!-- Metadata for character encoding, viewport, and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 webpage with Flexbox, Grid, and media queries">
+    <title>Advanced HTML5 Demo</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page header with title -->
+    <header class="main-header">
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content section using Grid -->
+    <main class="main-content">
+        <!-- Section for ordered list and image -->
+        <section id="intro" class="content-section">
+            <h2>Introduction</h2>
+            <!-- Ordered list with Roman numerals -->
+            <ol type="I">
+                <li>Explore HTML5 features</li>
+                <li>Create accessible forms</li>
+                <li>Embed multimedia content</li>
+            </ol>
+
+            <!-- External image from Pexels -->
+            <figure>
+                <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team collaboration at a desk" class="styled-image">
+                <figcaption>Team collaboration - Image from Pexels</figcaption>
+            </figure>
+        </section>
+
+        <!-- Section for contact table -->
+        <section id="contacts" class="content-section">
+            <h2>Contact List</h2>
+            <!-- Table with 5 contacts -->
+            <table class="contact-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Okafor</td>
+                        <td>15 Golf Course Road, Benin City, Edo</td>
+                        <td>+234-802-123-4567</td>
+                        <td><a href="mailto:john.okafor@ymail.com">john.okafor@ymail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Olowoja</td>
+                        <td>16 Vaulks Road, Onitsha, Anambra</td>
+                        <td>+234-803-123-4567</td>
+                        <td><a href="mailto:jane.olowoja@ymail.com">jane.olowoja@ymail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Alice Abubakar</td>
+                        <td>789 Pine Rd, Victoria Island, Lagos</td>
+                        <td>+234-803-321-7654</td>
+                        <td><a href="mailto:alice.abubakar@ymail.com">alice.abubakar@ymail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bobby Imadghi</td>
+                        <td>15 Aluma Road, Lugbe, Abuja</td>
+                        <td>+234-902-123-4567</td>
+                        <td><a href="mailto:bobby.imadghi@ymail.com">bob.williams@ymail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Emmanuella Onoja</td>
+                        <td>House 10, Riverpark Estate, Abuja</td>
+                        <td>+234-702-123-4567</td>
+                        <td><a href="mailto:emmanuella.onoja@ymail.com">emmanuella.onoja@ymail.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section for registration form -->
+        <section id="register" class="content-section">
+            <h2>Registration Form</h2>
+            <!-- Registration form with validation -->
+            <form action="/submit" method="post" class="register-form">
+                <!-- Name field -->
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required pattern="[A-Za-z\s]{2,50}" title="Name should only contain letters and spaces, 2-50 characters"><br>
+
+                <!-- Email field -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+                <!-- Password field -->
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8" title="Password must be at least 8 characters"><br>
+
+                <!-- Date of birth field -->
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+
+                <!-- Dropdown for State -->
+                <label for="state">State:</label><br>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>Select your state</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                </select><br>
+
+                <!-- Radio buttons for subscription -->
+                <fieldset>
+                    <legend>Subscription Type:</legend>
+                    <input type="radio" id="free" name="subscription" value="free" required>
+                    <label for="free">Free</label>
+                    <input type="radio" id="premium" name="subscription" value="premium">
+                    <label for="premium">Premium</label>
+                </fieldset><br>
+
+                <!-- Checkboxes for interests -->
+                <fieldset>
+                    <legend>Interests:</legend>
+                    <input type="checkbox" id="coding" name="interests" value="coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" id="design" name="interests" value="design">
+                    <label for="design">Design</label>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                </fieldset><br>
+
+                <!-- Submit button -->
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Section for multimedia -->
+        <section id="multimedia" class="content-section">
+            <h2>Multimedia Content</h2>
+            <!-- Audio element -->
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Video element -->
+            <video controls class="responsive-video">
+                <source src="https://archive.org/download/BigBuckBunny_124/BigBuckBunny_124.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <!-- Footer with contact information -->
+    <footer class="main-footer">
+        <p>
+            Contact us at: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+        </p>
+        <p>
+            © 2025 Advanced HTML5 Assignment. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
